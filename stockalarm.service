@@ -1,0 +1,17 @@
+[Unit]
+Description=Track stocks in the background
+ConditionPathExists=/home/mcuve/.stn
+After=network.target
+[Service]
+Type=simple
+User=stn
+Group=stn
+WorkingDirectory=/home/mcuve/.stn
+ExecStart=/usr/local/go/bin/stn --config /home/mcuve/.stn/config.json
+Restart=on-failure
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=stn
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,19 @@
+stocks:
+  - name: tesla
+    track_time: 10s 
+    emailNotify: true
+    smsNotify: true
+    osNotify: true
+  - name: mongodb
+    track_time: 15s 
+    emailNotify: true
+    smsNotify: true
+    osNotify: true
+
+config:
+  sengrid_api_key: XXX
+  sms_api_key: XXX
+  target_email: mmcuve@gmail.com
+  target_sms: +52 443 378 7404
+  stock_api: 1234 # this is the api key for the stocks real api to track the prices in the background.
+
